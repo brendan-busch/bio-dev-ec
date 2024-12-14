@@ -1,0 +1,122 @@
+__________________________
+## Start the bash Session 
+__________________________
+
+--- Install R ---
+
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
+
+
+sudo apt-get update
+sudo apt-get install r-base r-base-dev
+sudo apt-get install r-base-dev
+
+
+
+sudo add-apt-repository ppa:ubuntugis/ppa
+
+
+sudo apt-get update
+sudo apt-get install gdal-bin
+
+sudo apt-get install libproj-dev
+sudo apt-get install proj-data
+sudo apt-get install proj-bin
+
+sudo apt-get install libudunits2-dev
+sudo apt-get install libfontconfig1-dev
+
+sudo apt-get install software-properties-common
+
+sudo apt-get install -y libproj-dev 
+sudo apt-get install -y libgeos-dev
+
+sudo apt-get install libxml2-dev
+
+sudo apt-get install libfreetype6-dev
+sudo apt-get install libharfbuzz-dev
+sudo apt-get install libfribidi-dev
+
+
+sudo apt-get install r-cran-cpp11 
+sudo apt-get install cpp-12
+
+sudo apt install cmake
+
+-- R libraries in Bash
+
+sudo apt-get install r-cran-rgdal
+sudo apt-get install r-cran-sf
+
+
+__________________________
+## Start the R Session 
+__________________________
+
+install.packages('sp')
+
+install.packages('pkgdown', type="source", repos=NULL)
+
+install.packages('devtools')
+require(devtools)
+
+library(devtools)
+library(sp)
+
+install.packages("progress") 
+library(progress)
+
+
+Sys.setenv(CFLAGS = "-Wno-error=format-security")
+Sys.setenv(CXXFLAGS = "-Wno-error=format-security")
+install.packages('/disks/Disk1/Ecocommons/libs/rgeos_0.6-4.tar.gz', type="source", repos=NULL)
+
+
+install.packages('/disks/Disk1/Ecocommons/libs/rgeos_0.6-4.tar.gz', type="source", repos=NULL)
+install.packages('/disks/Disk1/Ecocommons/libs/rgdal_1.6-7.tar.gz', type="source", repos=NULL)
+
+
+install.packages("remotes")
+install.packages("git2r") # required for remotes::install_git to work
+
+library(devtools)
+library(sp)
+library(rgdal)
+library(rgeos)
+
+
+install.packages('terra', type="source")
+install.packages('xml2')
+install.packages('raster')
+install.packages('usdm')
+install.packages('dismo')
+
+library(terra)
+library(xml2)
+library(raster)
+library(usdm)
+library(dismo)
+
+
+
+Sys.setenv(GITHUB_PAT="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")
+
+install_github('johnbaums/rmaxent')
+
+library(rmaxent)
+library(rgdal)
+
+remotes::install_version("biomod2", version = "4.1-2", repos = "https://cran.r-project.org")
+
+
+remotes::install_git(
+  "https://gitlab.com/ecocommons-australia/ecocommons-platform/ecocommons",
+  upgrade = "never") 
+library(ecocommons)
+
+
+remotes::install_gitlab("ecocommons-australia/community-modelling-workflow",
+                        subdir = "cmGDM/",
+                        auth_token = "glpat-ZkrNPPksV74B1VnRKR2h",
+                        quiet = TRUE)
